@@ -1,0 +1,12 @@
+Web & Mobile Apps
+reactjs, react nativeFront-end dev
+
+3D Animated websites
+gsap, threejs
+
+Front-end Dev
+html,css,js
+
+Back-end Dev
+nodejs, mongodb
+

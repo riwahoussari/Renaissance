@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="./scrollTrigger.css">
+    <script src="./script.js" defer></script>
+</head>
+<body>
+    <div id="background"><div id="front"></div></div>
+    
+    <div class="screenSizeMarker screenSizeMarker1"></div>
+    <div class="screenSizeMarker screenSizeMarker2"></div>
+    <div class="screenSizeMarker screenSizeMarker3"></div>
+    <div class="screenSizeMarker screenSizeMarker4"></div>
+    <div class="screenSizeMarker screenSizeMarker5"></div>
+
+    <header id="headerWhite">
+        <div class="leftHeader">
+            <p class="name" data-font="Migra 100">Riwa Houssari</p>
+            <p class="description" data-font="mona-700">Developer, UI/UX Designer</p>
+        </div>
+        <nav>
+            <ul data-font="migra-100">
+                <li>About me</li>
+                <li>Contact</li>
+            </ul>
+        </nav>
+        <div class="scrollBar"></div>
+    </header>
+    <header id="headerBlack">
+        <div class="leftHeader">
+            <p class="name" data-font="Migra 100">Riwa Houssari</p>
+            <p class="description" data-font="mona-700">Developer, UI/UX Designer</p>
+        </div>
+        <nav>
+            <ul data-font="migra-100">
+                <li>About me</li>
+                <li>Contact</li>
+            </ul>
+        </nav>
+        <div class="scrollBar"></div>
+    </header>
+    <main id="contentWrapper">
+
+        <section id="hero">
+            <div class="leftText">
+                <p data-font="mona-700">creative</p>
+                <div class="h1-wrapper">
+                    <h1 data-font="migra-900">DESIGNER <span data-font="migra-100">&</span></h1>
+                </div>
+                <h1 data-font="migra-900">DEVELOPER </h1>
+            </div>
+            <div class="rightText" data-font="mona-500">
+                <p class="line line-right">I AM A DEVELOPER AND </p>
+                <p class="line ">UX/UI DESIGNER BASED IN LEBANON. I HAVE  A
+                </p>
+                <p class="line"> PASSION AND A GOAL TO HELP PROFESSIONALS </p>
+                <p class="line">AND EXPERTS ELEVATE THEIR ONLINE PRESENCE.</p>
+                <p class="line"> I LOVE MODERN AND UNIQUE DESIGNS THAT</p>
+                <p class="line line-left"> TELL A STORY.</p>
+            </div>
+        </section>
+        <section id="skills">
+            <h2 data-font="migra-900">My Expertise</h2>
+            <div class="skillsContainer">
+                <div class="skillsWraper">
+                    <div class="skillCard skillCard1" data-font="mona-700">1</div>
+                    <div class="skillCard" data-font="mona-700">2</div>
+                </div>
+                <div class="skillsWraper">
+                    <div class="skillCard" data-font="mona-700">3</div>
+                    <div class="skillCard skillCard4" data-font="mona-700">4</div>
+                </div>
+            </div>
+        </section>
+        <section id="middle">
+            <div id="marquee" data-font="mona-700">A DIGITAL DORMANT ERA AWAITS REBIRTH</div>
+            <div class="imgContainer">
+                <img src="./assets/robotHand.jpg" class="robotHand">
+                <img src="./assets/humanHand.jpg" class="humanHand">
+                <div class="star"></div>
+            </div>
+            <div id="marquee2" data-font="mona-700">A DIGITAL DORMANT ERA AWAITS REBIRTH</div>
+        </section>
+    </main>
+    
+    <div id="scrollTriggers">
+        <div class="scrollTrigger" id="heroTrig">mn</div>
+        <div class="scrollTrigger" id="skillsTrig">mn</div>
+        <div class="scrollTrigger" id="skillsOutTrig">mn</div>
+        <div class="scrollTrigger" id="marqueeTrig">mn</div>
+        <div class="scrollTrigger" id="starTrig">mn</div>
+        <div class="scrollTrigger" id="star2Trig">mn</div>
+        <section style="height: 250vh;"></section>
+    </div>
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.3/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.3/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.29/bundled/lenis.min.js"></script> 
+</body>
+
+</html> 

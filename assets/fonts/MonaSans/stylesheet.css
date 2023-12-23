@@ -1,0 +1,208 @@
+@font-face {
+    font-family: 'Mona-Sans';
+    src: url('Mona-Sans-ExtraBoldNarrow.eot');
+    src: local('Mona-Sans ExtraBold Narrow'), local('Mona-Sans-ExtraBoldNarrow'),
+        url('Mona-Sans-ExtraBoldNarrow.eot?#iefix') format('embedded-opentype'),
+        url('Mona-Sans-ExtraBoldNarrow.woff2') format('woff2'),
+        url('Mona-Sans-ExtraBoldNarrow.woff') format('woff'),
+        url('Mona-Sans-ExtraBoldNarrow.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Mona-Sans';
+    src: url('Mona-Sans-BoldNarrowItalic.eot');
+    src: local('Mona-Sans Bold Narrow Italic'), local('Mona-Sans-BoldNarrowItalic'),
+        url('Mona-Sans-BoldNarrowItalic.eot?#iefix') format('embedded-opentype'),
+        url('Mona-Sans-BoldNarrowItalic.woff2') format('woff2'),
+        url('Mona-Sans-BoldNarrowItalic.woff') format('woff'),
+        url('Mona-Sans-BoldNarrowItalic.ttf') format('truetype');
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Mona-Sans';
+    src: url('Mona-Sans-LightNarrow.eot');
+    src: local('Mona-Sans Light Narrow'), local('Mona-Sans-LightNarrow'),
+        url('Mona-Sans-LightNarrow.eot?#iefix') format('embedded-opentype'),
+        url('Mona-Sans-LightNarrow.woff2') format('woff2'),
+        url('Mona-Sans-LightNarrow.woff') format('woff'),
+        url('Mona-Sans-LightNarrow.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Mona-Sans';
+    src: url('Mona-Sans-BlackNarrowItalic.eot');
+    src: local('Mona-Sans Black Narrow Italic'), local('Mona-Sans-BlackNarrowItalic'),
+        url('Mona-Sans-BlackNarrowItalic.eot?#iefix') format('embedded-opentype'),
+        url('Mona-Sans-BlackNarrowItalic.woff2') format('woff2'),
+        url('Mona-Sans-BlackNarrowItalic.woff') format('woff'),
+        url('Mona-Sans-BlackNarrowItalic.ttf') format('truetype');
+    font-weight: 900;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Mona-Sans';
+    src: url('Mona-Sans-BoldNarrow.eot');
+    src: local('Mona-Sans Bold Narrow'), local('Mona-Sans-BoldNarrow'),
+        url('Mona-Sans-BoldNarrow.eot?#iefix') format('embedded-opentype'),
+        url('Mona-Sans-BoldNarrow.woff2') format('woff2'),
+        url('Mona-Sans-BoldNarrow.woff') format('woff'),
+        url('Mona-Sans-BoldNarrow.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Mona-Sans';
+    src: url('Mona-Sans-BlackNarrow.eot');
+    src: local('Mona-Sans Black Narrow'), local('Mona-Sans-BlackNarrow'),
+        url('Mona-Sans-BlackNarrow.eot?#iefix') format('embedded-opentype'),
+        url('Mona-Sans-BlackNarrow.woff2') format('woff2'),
+        url('Mona-Sans-BlackNarrow.woff') format('woff'),
+        url('Mona-Sans-BlackNarrow.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Mona-Sans';
+    src: url('Mona-Sans-ExtraBoldNarrowItalic.eot');
+    src: local('Mona-Sans ExtraBold Narrow Italic'), local('Mona-Sans-ExtraBoldNarrowItalic'),
+        url('Mona-Sans-ExtraBoldNarrowItalic.eot?#iefix') format('embedded-opentype'),
+        url('Mona-Sans-ExtraBoldNarrowItalic.woff2') format('woff2'),
+        url('Mona-Sans-ExtraBoldNarrowItalic.woff') format('woff'),
+        url('Mona-Sans-ExtraBoldNarrowItalic.ttf') format('truetype');
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Mona-Sans';
+    src: url('Mona-Sans-MediumNarrowItalic.eot');
+    src: local('Mona-Sans Medium Narrow Italic'), local('Mona-Sans-MediumNarrowItalic'),
+        url('Mona-Sans-MediumNarrowItalic.eot?#iefix') format('embedded-opentype'),
+        url('Mona-Sans-MediumNarrowItalic.woff2') format('woff2'),
+        url('Mona-Sans-MediumNarrowItalic.woff') format('woff'),
+        url('Mona-Sans-MediumNarrowItalic.ttf') format('truetype');
+    font-weight: 500;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Mona-Sans';
+    src: url('Mona-Sans-MediumNarrow.eot');
+    src: local('Mona-Sans Medium Narrow'), local('Mona-Sans-MediumNarrow'),
+        url('Mona-Sans-MediumNarrow.eot?#iefix') format('embedded-opentype'),
+        url('Mona-Sans-MediumNarrow.woff2') format('woff2'),
+        url('Mona-Sans-MediumNarrow.woff') format('woff'),
+        url('Mona-Sans-MediumNarrow.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Mona-Sans';
+    src: url('Mona-Sans-LightNarrowItalic.eot');
+    src: local('Mona-Sans Light Narrow Italic'), local('Mona-Sans-LightNarrowItalic'),
+        url('Mona-Sans-LightNarrowItalic.eot?#iefix') format('embedded-opentype'),
+        url('Mona-Sans-LightNarrowItalic.woff2') format('woff2'),
+        url('Mona-Sans-LightNarrowItalic.woff') format('woff'),
+        url('Mona-Sans-LightNarrowItalic.ttf') format('truetype');
+    font-weight: 300;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Mona-Sans';
+    src: url('Mona-Sans-UltraLightNarrow.eot');
+    src: local('Mona-Sans UltraLight Narrow'), local('Mona-Sans-UltraLightNarrow'),
+        url('Mona-Sans-UltraLightNarrow.eot?#iefix') format('embedded-opentype'),
+        url('Mona-Sans-UltraLightNarrow.woff2') format('woff2'),
+        url('Mona-Sans-UltraLightNarrow.woff') format('woff'),
+        url('Mona-Sans-UltraLightNarrow.ttf') format('truetype');
+    font-weight: 200;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Mona-Sans';
+    src: url('Mona-Sans-RegularNarrowItalic.eot');
+    src: local('Mona-Sans Regular Narrow Italic'), local('Mona-Sans-RegularNarrowItalic'),
+        url('Mona-Sans-RegularNarrowItalic.eot?#iefix') format('embedded-opentype'),
+        url('Mona-Sans-RegularNarrowItalic.woff2') format('woff2'),
+        url('Mona-Sans-RegularNarrowItalic.woff') format('woff'),
+        url('Mona-Sans-RegularNarrowItalic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Mona-Sans';
+    src: url('Mona-Sans-UltraLightNarrowItalic.eot');
+    src: local('Mona-Sans UltraLight Narrow Italic'), local('Mona-Sans-UltraLightNarrowItalic'),
+        url('Mona-Sans-UltraLightNarrowItalic.eot?#iefix') format('embedded-opentype'),
+        url('Mona-Sans-UltraLightNarrowItalic.woff2') format('woff2'),
+        url('Mona-Sans-UltraLightNarrowItalic.woff') format('woff'),
+        url('Mona-Sans-UltraLightNarrowItalic.ttf') format('truetype');
+    font-weight: 200;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Mona-Sans';
+    src: url('Mona-Sans-SemiBoldNarrow.eot');
+    src: local('Mona-Sans SemiBold Narrow'), local('Mona-Sans-SemiBoldNarrow'),
+        url('Mona-Sans-SemiBoldNarrow.eot?#iefix') format('embedded-opentype'),
+        url('Mona-Sans-SemiBoldNarrow.woff2') format('woff2'),
+        url('Mona-Sans-SemiBoldNarrow.woff') format('woff'),
+        url('Mona-Sans-SemiBoldNarrow.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Mona-Sans';
+    src: url('Mona-Sans-SemiBoldNarrowItalic.eot');
+    src: local('Mona-Sans SemiBold Narrow Italic'), local('Mona-Sans-SemiBoldNarrowItalic'),
+        url('Mona-Sans-SemiBoldNarrowItalic.eot?#iefix') format('embedded-opentype'),
+        url('Mona-Sans-SemiBoldNarrowItalic.woff2') format('woff2'),
+        url('Mona-Sans-SemiBoldNarrowItalic.woff') format('woff'),
+        url('Mona-Sans-SemiBoldNarrowItalic.ttf') format('truetype');
+    font-weight: 600;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Mona-Sans';
+    src: url('Mona-Sans-RegularNarrow.eot');
+    src: local('Mona-Sans Regular Narrow'), local('Mona-Sans-RegularNarrow'),
+        url('Mona-Sans-RegularNarrow.eot?#iefix') format('embedded-opentype'),
+        url('Mona-Sans-RegularNarrow.woff2') format('woff2'),
+        url('Mona-Sans-RegularNarrow.woff') format('woff'),
+        url('Mona-Sans-RegularNarrow.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+

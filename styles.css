@@ -1,0 +1,511 @@
+@font-face {
+    font-family: 'Mona Sans 700';
+    src: url('./assets/fonts/MonaSans/Mona-Sans-BoldNarrow.eot');
+    src: local('Mona Sans 700'), local('TuskerGrotesk-3500Medium'),
+        url('./assets/fonts/MonaSans/Mona-Sans-BoldNarrow.eot?#iefix') format('embedded-opentype'),
+        url('./assets/fonts/MonaSans/Mona-Sans-BoldNarrow.woff2') format('woff2'),
+        url('./assets/fonts/MonaSans/Mona-Sans-BoldNarrow.woff') format('woff'),
+        url('./assets/fonts/MonaSans/Mona-Sans-BoldNarrow.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}@font-face {
+    font-family: 'Mona Sans 600';
+    src: url('./assets/fonts/MonaSans/Mona-Sans-SemiBoldNarrow.eot');
+    src: local('Mona Sans 600'), local('TuskerGrotesk-3500Medium'),
+        url('./assets/fonts/MonaSans/Mona-Sans-SemiBoldNarrow.eot?#iefix') format('embedded-opentype'),
+        url('./assets/fonts/MonaSans/Mona-Sans-SemiBoldNarrow.woff2') format('woff2'),
+        url('./assets/fonts/MonaSans/Mona-Sans-SemiBoldNarrow.woff') format('woff'),
+        url('./assets/fonts/MonaSans/Mona-Sans-SemiBoldNarrow.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}@font-face {
+    font-family: 'Mona Sans 500';
+    src: url('./assets/fonts/MonaSans/Mona-Sans-SemiBoldNarrow.eot');
+    src: local('Mona Sans 500'), local('TuskerGrotesk-3500Medium'),
+        url('./assets/fonts/MonaSans/Mona-Sans-MediumNarrow.eot?#iefix') format('embedded-opentype'),
+        url('./assets/fonts/MonaSans/Mona-Sans-MediumNarrow.woff2') format('woff2'),
+        url('./assets/fonts/MonaSans/Mona-Sans-MediumNarrow.woff') format('woff'),
+        url('./assets/fonts/MonaSans/Mona-Sans-MediumNarrow.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}@font-face {
+    font-family: 'Migra 900';
+    src: url('./assets/fonts/Migra/Migra-Extrabold.eot');
+    src: local('Migra 900'), local('Migra-Extrabold'),
+        url('./assets/fonts/Migra/Migra-Extrabold.eot?#iefix') format('embedded-opentype'),
+        url('./assets/fonts/Migra/Migra-Extrabold.woff2') format('woff2'),
+        url('./assets/fonts/Migra/Migra-Extrabold.woff') format('woff'),
+        url('./assets/fonts/Migra/Migra-Extrabold.ttf') format('truetype'),
+        url('./assets/fonts/Migra/Migra-Extrabold.otf') format('opentype');
+    font-weight: 800;
+    font-style: normal;
+    font-display: swap;
+}@font-face {
+    font-family: 'Migra 100';
+    src: url('./assets/fonts/Migra/Migra-Extralight.eot');
+    src: local('Migra 100'), local('Migra-Extralight'),
+        url('./assets/fonts/Migra/Migra-Extralight.eot?#iefix') format('embedded-opentype'),
+        url('./assets/fonts/Migra/Migra-Extralight.woff2') format('woff2'),
+        url('./assets/fonts/Migra/Migra-Extralight.woff') format('woff'),
+        url('./assets/fonts/Migra/Migra-Extralight.ttf') format('truetype'),
+        url('./assets/fonts/Migra/Migra-Extralight.otf') format('opentype');
+    font-weight: 800;
+    font-style: normal;
+    font-display: swap;
+}
+[data-font="mona-700"]{font-family: 'Mona Sans 700', sans-serif;}
+[data-font="mona-600"]{font-family: 'Mona Sans 600', sans-serif;}
+[data-font="mona-500"]{font-family: 'Mona Sans 500', sans-serif;}
+[data-font="migra-100"]{font-family: 'Migra 100', sans-serif;}
+[data-font="migra-900"]{font-family: 'Migra 900', sans-serif;}
+::-webkit-scrollbar{width: 0;}
+
+.screenSizeMarker{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    /* border: 2px solid rgba(255, 0, 0, 1); */
+}.screenSizeMarker1{
+    width: 768px;
+    height: 1024px;
+}.screenSizeMarker2{
+    width: 800px;
+    height: 1280px;
+}.screenSizeMarker3{
+    width: 601px;
+    height: 962px;
+}.screenSizeMarker4{
+    width: 540px;
+    height: 720px;
+}.screenSizeMarker5{
+    width: 810px;
+    height: 1080px;
+}
+/* 
+large landscape
+1500+        //DONE
+1920×1080 
+1600×900 
+1536×864 
+
+landscape
+1200 - 1500  //DONE
+1440×900 
+1366x768 
+1280×1024
+1280×800 
+1280×720 
+1024×768 
+
+tablets //DONE
+9̶6̶2̶×̶6̶0̶1 
+1024x1366 
+912x1368 
+810×1080 
+800×1280 
+768×1024 
+601×962 
+540x720 
+ */
+
+/* mobiles 
+5/9 - 3/9
+360×640 9/16  506/900
+414×896 416/900
+375×667 505/900
+360×780 415/900 
+360×760  426/900
+375×812  414/900
+        380/900
+        320/900
+*/
+
+:root{
+    /* colors */
+    --white: #fff;
+    --black: #000;
+    --beige: #f3dbc7;
+    /* padding */
+    --side-padding: clamp(10px, 3.75vw, 47.5px);
+    --side-padding-x2: clamp(20px, 7.5vw, 95px);
+    --header-padding: clamp(10px,1.25vw, 12.5px);
+    --header-paddingx2: clamp(20px,2.5vw, 25px);
+    /* card size */
+    --skill-card: clamp(250px,25vw, 500px); 
+    /* font-sizes */
+    --margin: clamp(25px, 2.5vw, 50px);
+    --FS-Marquee: min(10vw,20vh); 
+    --FS-10: clamp(64px,5vw, 44.8px); 
+    --FS-9: clamp(57.6px,4.5vw, 40.3px); 
+    --FS-8: clamp(51.2px,4vw, 35.8px); 
+    --FS-7: clamp(44.8px,3.5vw, 31.3px); 
+    --FS-6: clamp(38.4px,3vw, 26.8px); 
+    --FS-5: clamp(31px,2.5vw, 22.4px); 
+    --FS-4: clamp(15.6px, 2vw, 17.9px);
+}@media only screen and (aspect-ratio >= 11/9){
+    :root{
+        --skill-card: min(30vw, 50vh);
+        --FS-10: min(5vw,10vh); 
+        --FS-9: min(4.5vw,9vh); 
+        --FS-8: min(4vw,8vh); 
+        --FS-7: min(3.5vw,7vh); 
+        --FS-6: min(3vw,6vh); 
+        --FS-5: min(2.5vw,5vh); 
+        --FS-4: min(2vw,4vh);
+        --FS-3: min(1.5vw,3vh);
+    }
+}@media only screen and (aspect-ratio < 11/9){
+    :root{        
+        --FS-10: min(10vw,6.5vh); 
+        --FS-9: min(9vh,6.75vw); 
+        --FS-8: min(8vh,6vw); 
+        --FS-7: min(7vh,5.25vw); 
+        --FS-6: min(6vh,4.5vw); 
+        --FS-5: min(5vh,3.75vw); 
+        --FS-4: min(4vh,3vw);
+        --FS-3: min(3vh,2.25vw);
+
+    }
+
+    #hero{
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+}
+@media only screen and (aspect-ratio < 12/9) {
+    :root{
+        --margin: clamp(20px, 2vw, 42px);
+        --skill-card: min(50vw, 35vh) ;
+    }
+}
+
+
+::-moz-selection { 
+    color: var(--white);
+    background: var(--beige);
+}
+::selection {
+    color: var(--white);
+    background: var(--beige);
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    line-height: 1;
+}
+body{
+    position: relative;
+    overflow-x: hidden;
+}
+#contentWrapper{
+    position: fixed;
+    z-index: 0;
+    height: 100vh;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+/* fixed backgrounds */
+#background{
+    position: fixed;
+    z-index: -3;
+    height: 120vh;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-image: url(./assets/Ceiling_of_Palazzo_Barberini_Squared.jpg);
+    background-position: center center;
+    background-size: cover;
+}#background::before{
+    content: '';
+    position: fixed;
+    z-index: -2;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 255, 0.2);
+}#background #front{
+    position: fixed;
+    z-index: -1;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: white;
+    background-color: black;
+    opacity: 0;
+}
+
+/* header */
+header{
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    left: 0;
+    right:  0;
+    
+    padding: var(--header-padding) var(--side-padding);
+    color: var(--white);
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: clamp(30px,3.75vw, 47.5px);
+
+}#headerBlack{color: var(--black); opacity: 0;}
+#headerBlack::before{background-color: rgba(0, 0, 0, 0.5);}
+#headerBlack .scrollBar{background-color: var(--black);}
+header::before{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: var(--side-padding);
+    right: var(--side-padding);
+    height: 1px;
+    background-color: rgba(255, 255, 255, 0.5);
+}header .scrollBar{
+    position: absolute;
+    bottom: 0px;
+    left: var(--side-padding);
+    height: 1px;
+    background-color: var(--white);
+}
+header .leftHeader{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3px;
+    font-size: var(--FS-4);
+}header .name{
+    margin-right: clamp(20px,2.5vw, 35px);
+}header ul{
+    width: max-content;
+    list-style: none;
+
+    font-size: var(--FS-4);
+
+    display: flex;
+    gap: clamp(20px,2.5vw, 20px);
+}
+
+section{
+    position: relative;
+    width: 100vw;
+    padding-inline: var(--side-padding);
+    color: white;
+}
+/* hero */
+#hero{
+    position: relative;
+    height: 100vh;
+    padding-block: clamp(60px,15vw, 150px) var(--side-padding);
+
+    display: flex;
+    justify-content: space-between;
+}
+#hero .leftText p{
+    font-size: var(--FS-8);
+    color: #f3dbc7;
+    margin-bottom: var(--FS-4) ;
+}
+#hero .leftText h1{
+    font-size: var(--FS-10);
+    line-height: 0.7;
+
+    transform: scale(1, 3);
+    transform-origin: top;
+} #hero h1 span{
+    color: #f3dbc7 ;
+    font-size: 30%;
+}
+#hero .rightText{
+    align-self: end;
+
+    display: flex;
+    flex-direction: column;
+    gap: clamp(5px,1.25vw, 12.5px);
+
+    font-size: var(--FS-6);
+    letter-spacing: 1px;
+    word-spacing: 2px;
+}#hero .rightText .line-right {
+    text-align: right;
+}
+
+/* skills */
+#skills{
+    position: relative;
+    min-height: 100vh;
+}#skills h2{
+    font-size: var(--FS-6);
+    color: var(--beige);
+}
+#skills .skillsContainer{
+    position: absolute;
+    bottom: 50vh;
+    transform: translate(-70%, 60%);
+    width: max-content;
+    margin-top: calc(var(--header-padding) * 4);
+}
+#skills .skillsContainer.landscape .skillsWraper{
+    display: inline;
+}
+#skills .skillCard{
+    width: var(--skill-card);
+    margin-inline: var(--margin);
+    aspect-ratio: 1;
+    border: 1px solid white;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: var(--FS-8);
+}#skills .skillsContainer.landscape .skillCard1{margin-left: 0;}
+#skills .skillsContainer.landscape .skillCard4{margin-right: 0;}
+
+/* screen aspect ratio < 11/9 */
+#skills .skillsContainer.portrait{
+    transform: translate(0%, 60%);
+    right: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#skills .skillsContainer.portrait .skillsWraper{
+    margin-bottom: calc(var(--margin)*2);
+    width: max-content;
+}
+#skills .skillsContainer.portrait .skillsWraper:nth-of-type(1){
+    transform: translateX(-80%);
+}#skills .skillsContainer.portrait .skillsWraper:nth-of-type(2){
+    transform: translateX(80%);
+}
+
+/* middle section */
+#middle{
+    height: 100vh;
+    position: relative;
+}
+#marquee{
+    position: absolute;
+    top: 10vh;
+    left: 100%;
+    z-index: 2;
+
+    width: max-content;
+    font-size: var(--FS-Marquee);
+}
+#marquee2{
+    position: absolute;
+    bottom: 10vh;
+    right: 100%;
+    z-index: 2;
+
+    width: max-content;
+    font-size: var(--FS-Marquee);
+    display: none;
+}
+.imgContainer{
+    position: absolute;
+    bottom: 50%;
+    right: 50%;
+    transform: translate(50%, 70%);
+
+    width: max-content;
+}.imgContainer img{
+    width: 52vw;
+}
+@media only screen and (aspect-ratio < 13/9) {
+    .imgContainer img{
+        width: 70vw;
+    }
+    
+}
+@media only screen and (aspect-ratio < 11/9) {
+    #marquee{top: 15vh}
+    .imgContainer{
+        transform: translate(50%, 80%);
+    }
+    .imgContainer img{
+        width: 80vw;
+    }
+    :root{
+        --FS-Marquee: min(12vw,20vh); 
+    }
+}
+@media only screen and (aspect-ratio < 9/9) {
+    .imgContainer img{
+        width: 90vw;
+    }
+    :root{
+        --FS-Marquee: min(15vw,20vh); 
+    }
+}
+@media only screen and (aspect-ratio < 8/9) {
+    .imgContainer{
+        transform: translate(50%, 55%);
+    }
+    #marquee2{
+        display: unset;
+        bottom: 10vh;
+    }
+}
+@media only screen and (aspect-ratio < 6/9) {
+    .imgContainer img{
+        width: 100vw;
+    }
+    :root{
+        --FS-Marquee: min(20vw, 20vh)
+    }
+}
+.imgContainer .robotHand{
+    transform: translateX(-52vw);
+    margin-right: 1vw;
+}.imgContainer .humanHand{
+    transform: translateX(52vw);
+    margin-left: 1vw;
+}
+.star{
+    width: 0.1vw;
+    height: 0.1vw;
+    border-radius: 100%;
+    background-color: white;
+    position: absolute;
+    bottom: 50%;
+    right: 50%;
+    opacity: 0;
+    
+    box-shadow: inset 0 0 0.8vw 0 #fff, 
+        0 0 0.8vw 0 #fff,
+        0 0 1.6vw 0.4vw #fff;
+}
+
+@media only screen and (aspect-ratio < 11/9){
+    :root{
+        --FS-10: min(10vw,6.5vh); 
+/* 
+        --FS-9: min(9vh,5.75vw); 
+        --FS-8: min(8vh,5vw); 
+        --FS-7: min(7vh,4.25vw); 
+        --FS-6: min(6vh,3.5vw); 
+        --FS-5: min(5vh,2.75vw); 
+        --FS-4: min(4vh,2vw); */
+        
+        --FS-9: min(9vh,6.75vw); 
+        --FS-8: min(8vh,6vw); 
+        --FS-7: min(7vh,5.25vw); 
+        --FS-6: min(6vh,4.5vw); 
+        --FS-5: min(5vh,3.75vw); 
+        --FS-4: min(4vh,3vw);
+    }
+    
+    #hero{
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+}

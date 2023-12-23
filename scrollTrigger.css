@@ -1,0 +1,11 @@
+#scrollTriggers{
+    height: 500vh;
+    /* padding-top: clamp(60px,15vw, 150px); */
+}
+#heroTrig, #marqueeTrig, #starTrig{
+    height: 100vh;
+}
+#skillsTrig{
+    height: 200vh;
+}
+#star2Trig{height: 150vh;}
