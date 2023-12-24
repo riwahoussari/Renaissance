@@ -157,7 +157,7 @@ function skillsContainerClass(){
 const lenis = new Lenis({
     smoothTouch: true,
     duration: 3,
-    touchMultiplier: 0.5
+    touchMultiplier: 0.8
 })
 
 function raf(time) {
