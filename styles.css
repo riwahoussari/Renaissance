@@ -145,42 +145,8 @@ tablets //DONE
     --FS-6: clamp(38.4px,3vw, 26.8px); 
     --FS-5: clamp(31px,2.5vw, 22.4px); 
     --FS-4: clamp(15.6px, 2vw, 17.9px);
-}@media only screen and (aspect-ratio >= 11/9){
-    :root{
-        --skill-card: min(30vw, 50vh);
-        --FS-10: min(5vw,10vh); 
-        --FS-9: min(4.5vw,9vh); 
-        --FS-8: min(4vw,8vh); 
-        --FS-7: min(3.5vw,7vh); 
-        --FS-6: min(3vw,6vh); 
-        --FS-5: min(2.5vw,5vh); 
-        --FS-4: min(2vw,4vh);
-        --FS-3: min(1.5vw,3vh);
-    }
-}@media only screen and (aspect-ratio < 11/9){
-    :root{        
-        --FS-10: min(10vw,6.5vh); 
-        --FS-9: min(9vh,6.75vw); 
-        --FS-8: min(8vh,6vw); 
-        --FS-7: min(7vh,5.25vw); 
-        --FS-6: min(6vh,4.5vw); 
-        --FS-5: min(5vh,3.75vw); 
-        --FS-4: min(4vh,3vw);
-        --FS-3: min(3vh,2.25vw);
-
-    }
-
-    #hero{
-        flex-direction: column;
-        justify-content: space-evenly;
-    }
 }
-@media only screen and (aspect-ratio < 12/9) {
-    :root{
-        --margin: clamp(20px, 2vw, 42px);
-        --skill-card: min(50vw, 35vh) ;
-    }
-}
+
 
 
 ::-moz-selection { 
@@ -331,8 +297,8 @@ section{
     gap: clamp(5px,1.25vw, 12.5px);
 
     font-size: var(--FS-6);
-    letter-spacing: 1px;
-    word-spacing: 2px;
+    letter-spacing: min(calc(var(--FS-6) * 0.05), 1px);
+    word-spacing: min(calc(var(--FS-6) * 0.1 ), 2px) ;
 }#hero .rightText .line-right {
     text-align: right;
 }
@@ -348,7 +314,7 @@ section{
 #skills .skillsContainer{
     position: absolute;
     bottom: 50vh;
-    transform: translate(-70%, 60%);
+    transform: translate(-80%, 60%);
     width: max-content;
     margin-top: calc(var(--header-padding) * 4);
 }
@@ -367,9 +333,9 @@ section{
 }#skills .skillsContainer.landscape .skillCard1{margin-left: 0;}
 #skills .skillsContainer.landscape .skillCard4{margin-right: 0;}
 
-/* screen aspect ratio < 11/9 */
+/* screen aspect ratio <= 12/9 */
 #skills .skillsContainer.portrait{
-    transform: translate(0%, 60%);
+    transform: translate(0%, 58%);
     right: 0;
     width: 100%;
     display: flex;
@@ -421,10 +387,7 @@ section{
     width: 52vw;
 }
 @media only screen and (aspect-ratio < 13/9) {
-    .imgContainer img{
-        width: 70vw;
-    }
-    
+    .imgContainer img{width: 70vw;} 
 }
 @media only screen and (aspect-ratio < 11/9) {
     #marquee{top: 15vh}
@@ -439,12 +402,8 @@ section{
     }
 }
 @media only screen and (aspect-ratio < 9/9) {
-    .imgContainer img{
-        width: 90vw;
-    }
-    :root{
-        --FS-Marquee: min(15vw,20vh); 
-    }
+    .imgContainer img{width: 90vw;}
+    :root{--FS-Marquee: min(15vw,20vh);}
 }
 @media only screen and (aspect-ratio < 8/9) {
     .imgContainer{
@@ -455,13 +414,21 @@ section{
         bottom: 10vh;
     }
 }
+@media only screen and (aspect-ratio < 7/9) {
+    .imgContainer img{width: 100vw;}
+    :root{--FS-Marquee: min(18vw, 20vh)}
+}
 @media only screen and (aspect-ratio < 6/9) {
-    .imgContainer img{
-        width: 100vw;
-    }
-    :root{
-        --FS-Marquee: min(20vw, 20vh)
-    }
+    #marquee{ top: 20vh;}
+    #marquee2{bottom: 15vh;}
+}
+@media only screen and (aspect-ratio < 5/9) {
+    .imgContainer img{width: 110vw;}
+    :root{--FS-Marquee: min(21vw, 20vh)}
+}
+@media only screen and (aspect-ratio < 4/9) {
+    #marquee{ top: 25vh;}
+    #marquee2{bottom: 20vh;}
 }
 .imgContainer .robotHand{
     transform: translateX(-52vw);
@@ -485,27 +452,68 @@ section{
         0 0 1.6vw 0.4vw #fff;
 }
 
+@media only screen and (aspect-ratio >= 11/9){
+    :root{
+        --skill-card: min(30vw, 50vh);
+        --FS-10: min(5vw,10vh); 
+        --FS-9: min(4.5vw,9vh); 
+        --FS-8: min(4vw,8vh); 
+        --FS-7: min(3.5vw,7vh); 
+        --FS-6: min(3vw,6vh); 
+        --FS-5: min(2.5vw,5vh); 
+        --FS-4: min(2vw,4vh);
+        --FS-3: min(1.5vw,3vh);
+    }
+}@media only screen and (aspect-ratio < 12/9) {
+    :root{
+        --margin: clamp(15px, 2vw, 42px);
+    }
+}
 @media only screen and (aspect-ratio < 11/9){
     :root{
-        --FS-10: min(10vw,6.5vh); 
-/* 
-        --FS-9: min(9vh,5.75vw); 
-        --FS-8: min(8vh,5vw); 
-        --FS-7: min(7vh,4.25vw); 
-        --FS-6: min(6vh,3.5vw); 
-        --FS-5: min(5vh,2.75vw); 
-        --FS-4: min(4vh,2vw); */
-        
+        --skill-card: 40vh;
+        --FS-10: min(10vw,6.5vh);         
         --FS-9: min(9vh,6.75vw); 
         --FS-8: min(8vh,6vw); 
         --FS-7: min(7vh,5.25vw); 
-        --FS-6: min(6vh,4.5vw); 
+        --FS-6: min(5vh,4.5vw); 
         --FS-5: min(5vh,3.75vw); 
         --FS-4: min(4vh,3vw);
+        --FS-3: min(3vh,2.25vw);
     }
-    
     #hero{
         flex-direction: column;
         justify-content: space-evenly;
     }
+}
+@media only screen and (aspect-ratio <= 6/9) {
+    :root{
+        --skill-card: min(90vw, 40vh);
+    }
+    #skills .skillsContainer.portrait .skillsWraper:nth-of-type(1){
+        transform: translateX(-95%);
+    }#skills .skillsContainer.portrait .skillsWraper:nth-of-type(2){
+        transform: translateX(120%);
+    }
+}
+@media only screen and (aspect-ratio <= 5/9){
+    :root{
+        --FS-10: min(15vw,6vh); 
+        --FS-9: min(13vh,6.5vw); 
+        --FS-8: min(12vh,6vw); 
+        --FS-7: min(11vh,5.5vw); 
+        --FS-6: min(10vh,5vw); 
+        --FS-5: min(9vh,4.5vw); 
+        --FS-4: min(8vh,4vw);
+        --FS-3: min(7vh,3.5vw);
+
+        --skill-card: min(90vw, 40vh)
+    }
+    #hero .rightText{
+        gap: clamp(3px,1vw, 10px);
+    }
+    #skills h2{
+        font-size: var(--FS-8);
+    }
+
 }

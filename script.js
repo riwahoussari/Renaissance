@@ -4,22 +4,23 @@ const header = document.querySelector('header')
 h1Wrapper.style.height = h1.clientHeight * 3 + 'px';
 const skillsSection = document.getElementById('skills')
 skillsSection.style.paddingTop = header.clientHeight * 1.5 + 'px'
+window.innerWidth / window.innerHeight <= 11/9 && (skillsSection.style.paddingTop = header.clientHeight * 1.2 + 'px')
 const skillsContainer = document.querySelector('.skillsContainer')
-window.innerWidth / window.innerHeight >= 12/9 && skillsContainer.classList.add('landscape')
-window.innerWidth / window.innerHeight < 12/9 && skillsContainer.classList.add('portrait')
+skillsContainerClass()
 let starSize = (window.innerWidth / window.innerHeight >= 1) ? '8vw' : '10vh';
 
- 
+
 
 window.addEventListener('resize', ()=>{
     h1Wrapper.style.height = h1.clientHeight * 3 + 'px';
     skillsSection.style.paddingTop = header.clientHeight * 1.5 + 'px';
-    window.innerWidth / window.innerHeight >= 12/9 ? skillsContainer.classList.add('landscape') : skillsContainer.classList.remove('landscape')
-    window.innerWidth / window.innerHeight < 12/9 ? skillsContainer.classList.add('portrait') : skillsContainer.classList.remove('portrait')
+    window.innerWidth / window.innerHeight <= 11/9 && (skillsSection.style.paddingTop = header.clientHeight * 1.2 + 'px')
+    skillsContainerClass()
 
     window.innerWidth / window.innerHeight >= 1 ? starSize = '8vw' : starSize = '10vh';
     
 })
+
 
 
 //timelines - animations
@@ -47,7 +48,7 @@ let heroOverlayTL = gsap.timeline({
 heroOverlayTL.to('#background #front', {opacity: '1'}, 'start')
 heroOverlayTL.to('#contentWrapper', {transform: 'translateY(-100vh)'}, 'start')
 
-let expertiseLandscapeTL = gsap.timeline({
+let expertiseTL = gsap.timeline({
     scrollTrigger: {
         trigger: '#skillsTrig',
         start: 'top bottom',
@@ -56,9 +57,11 @@ let expertiseLandscapeTL = gsap.timeline({
         // markers: true
     }
 })
-expertiseLandscapeTL.to('.skillsContainer.landscape', {transform: 'translateY(60%) translateX(30%)'}, 'start')
-expertiseLandscapeTL.to('.skillsContainer.portrait .skillsWraper:nth-of-type(1)', {transform: 'translateX(40%)'}, 'start')
-expertiseLandscapeTL.to('.skillsContainer.portrait .skillsWraper:nth-of-type(2)', {transform: 'translateX(-40%)'}, 'start')
+expertiseTL.to('.skillsContainer.landscape', {transform: 'translateY(60%) translateX(30%)'}, 'start')
+expertiseTL.to('.skillsContainer.tablet .skillsWraper:nth-of-type(1)', {transform: 'translateX(40%)'}, 'start')
+expertiseTL.to('.skillsContainer.tablet .skillsWraper:nth-of-type(2)', {transform: 'translateX(-40%)'}, 'start')
+expertiseTL.to('.skillsContainer.mobile .skillsWraper:nth-of-type(1)', {transform: 'translateX(75%)'}, 'start')
+expertiseTL.to('.skillsContainer.mobile .skillsWraper:nth-of-type(2)', {transform: 'translateX(-60%)'}, 'start')
 
 
 let skillsOutTL = gsap.timeline({
@@ -128,6 +131,26 @@ window.onscroll = function(){
   if(progressHeight >= 99){width += window.innerWidth / 100}
   if(progressHeight <= 1){width = 0}
   progress.style.width = `${width}px`
+}
+
+//some functions
+
+function skillsContainerClass(){
+    if(window.innerWidth/window.innerHeight >= 12/9){
+        skillsContainer.classList.add('landscape')
+
+        skillsContainer.classList.remove('portrait', 'tablet', 'mobile')
+    }else if(window.innerWidth/window.innerHeight >= 6/9){
+        skillsContainer.classList.add('tablet')
+        skillsContainer.classList.add('portrait')
+
+        skillsContainer.classList.remove('landscape', 'mobile')
+    }else{
+        skillsContainer.classList.add('mobile')
+        skillsContainer.classList.add('portrait')
+
+        skillsContainer.classList.remove('landscape', 'tablet')
+    }
 }
 
 // lenis setup
