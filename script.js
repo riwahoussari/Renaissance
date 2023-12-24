@@ -21,6 +21,7 @@ window.addEventListener('resize', ()=>{
     
 })
 
+
 //timelines - animations
 let heroBgTL = gsap.timeline({
     scrollTrigger: {
@@ -129,12 +130,16 @@ window.onscroll = function(){
   progress.style.width = `${width}px`
 }
 
-//lenis setup
-// const lenis = new Lenis()
+// lenis setup
+const lenis = new Lenis({
+    smoothTouch: true,
+    duration: 3,
+    touchMultiplier: 1
+})
 
-// function raf(time) {
-//   lenis.raf(time)
-//   requestAnimationFrame(raf)
-// }
+function raf(time) {
+  lenis.raf(time)
+  requestAnimationFrame(raf)
+}
 
-// requestAnimationFrame(raf)
+requestAnimationFrame(raf)
