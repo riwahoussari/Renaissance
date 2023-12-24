@@ -130,11 +130,11 @@ window.onscroll = function(){
 }
 
 //lenis setup
-const lenis = new Lenis()
+// const lenis = new Lenis()
 
-function raf(time) {
-  lenis.raf(time)
-  requestAnimationFrame(raf)
-}
+// function raf(time) {
+//   lenis.raf(time)
+//   requestAnimationFrame(raf)
+// }
 
-requestAnimationFrame(raf)
+// requestAnimationFrame(raf)
